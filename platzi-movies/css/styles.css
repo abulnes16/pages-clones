@@ -1,0 +1,118 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 125px 1fr;
+  grid-template-rows: 80px 100%;
+  grid-template-areas:
+    "header header"
+    "navbar content";
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30px;
+  grid-area: header;
+  box-shadow: 0px 2px 3px 0px rgba(32, 33, 36, 0.28);
+}
+
+.header .logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.header .user-profile {
+  display: flex;
+  align-items: center;
+}
+
+.user-profile figure {
+  margin: 0 10px;
+}
+
+.user-profile img {
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.user-profile p {
+  font-weight: 600;
+}
+
+.header .search {
+  display: flex;
+  align-items: center;
+}
+
+.search input {
+  outline: none;
+  border: 1px solid rgba(32, 33, 36, 0.28);
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 16px;
+  width: 40rem;
+}
+
+.navbar {
+  grid-area: navbar;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: white;
+  background: rgb(255, 161, 161);
+  background: linear-gradient(
+    270deg,
+    rgba(255, 161, 161, 1) 0%,
+    rgba(255, 117, 122, 1) 9%,
+    rgba(242, 105, 110, 1) 24%,
+    rgba(255, 95, 102, 1) 44%,
+    rgba(242, 85, 92, 1) 75%,
+    rgba(227, 64, 71, 1) 99%,
+    rgba(252, 83, 90, 1) 100%
+  );
+  text-align: center;
+}
+
+.navbar ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+  margin: 20px 0;
+  padding: 0;
+  min-height: 85vh;
+}
+
+.movies-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.navbar  i {
+  font-size: 28px;
+}
+
+.navbar p {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.navbar .settings {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ 
+}
+
+.movies-categories {
+  display: grid;
+  grid-template-columns: repeat(3, 300px);
+  gap: 40px;
+  grid-area: content;
+  justify-content: center;
+}
