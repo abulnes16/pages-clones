@@ -75,6 +75,7 @@ body {
     rgba(252, 83, 90, 1) 100%
   );
   text-align: center;
+  box-sizing: content-box;
 }
 
 .navbar ul {
@@ -84,13 +85,13 @@ body {
   list-style: none;
   margin: 20px 0;
   padding: 0;
-  min-height: 85vh;
 }
 
 .movies-list {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 0 40px;
 }
 
 .navbar  i {
@@ -111,8 +112,47 @@ body {
 
 .movies-categories {
   display: grid;
-  grid-template-columns: repeat(3, 300px);
+  grid-template-columns: repeat(3, 350px);
+  grid-auto-rows: 250px;
   gap: 40px;
   grid-area: content;
-  justify-content: center;
+}
+
+.movies-categories .movie-card {
+  position: relative;
+}
+
+.movie-card {
+  box-shadow: 0px 0px 7px 1px grey;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.movie-card img {
+  width: 100%;
+  height: 100%;
+}
+
+.movie-info {
+  background-color: rgba(227, 64, 71, 0.6);
+  position: absolute;
+  bottom: 0;
+  color: white;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 15px;
+}
+
+.movie-card .movie-title {
+  font-size: 18px;
+}
+
+.movie-card h4 {
+  margin: 0
+}
+
+.movie-card p {
+  margin: 5px 0;
+  text-align: justify;
+  font-size: 14px;
 }
